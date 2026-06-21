@@ -1,0 +1,3 @@
+'use client';
+import { useState } from 'react';
+export default function ResumeUploader(){const [status,setStatus]=useState('');async function upload(e:React.FormEvent<HTMLFormElement>){e.preventDefault();const fd=new FormData(e.currentTarget);setStatus('Uploading...');const r=await fetch('http://localhost:8000/resumes/upload',{method:'POST',body:fd});setStatus(r.ok?'Resume parsed and indexed locally.':'Upload failed.');}return <form onSubmit={upload} className="space-y-3"><input className="input" type="file" name="file" accept=".pdf,.docx" required/><button className="btn">Upload Resume</button><p className="text-sm text-slate-600">{status}</p></form>}

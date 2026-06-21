@@ -1,0 +1,3 @@
+'use client';
+import { useRef,useState } from 'react';
+export default function VoiceControl(){const ws=useRef<WebSocket|null>(null);const [log,setLog]=useState<string[]>([]);function connect(){ws.current=new WebSocket('ws://localhost:8000/interviews/ws/demo');ws.current.onmessage=e=>setLog(x=>[...x,e.data]);}function send(){ws.current?.send(JSON.stringify({type:'answer',text:'I built a local-first project using Python and React.'}));}return <div className="space-y-4"><div className="flex gap-3"><button className="btn" onClick={connect}>Connect</button><button className="btn bg-emerald-600" onClick={send}>Push to Talk</button></div><div className="card p-4 h-56 overflow-auto text-sm">{log.map((l,i)=><p key={i}>{l}</p>)}</div></div>}
