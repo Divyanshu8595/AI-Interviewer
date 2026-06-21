@@ -1,0 +1,1 @@
+{"scripts":{"dev":"next dev frontend","build":"next build frontend","lint":"next lint frontend"},"dependencies":{"@types/node":"^20.14.0","@types/react":"^18.3.0","@types/react-dom":"^18.3.0","next":"^14.2.4","react":"^18.3.1","react-dom":"^18.3.1","typescript":"^5.5.0"},"devDependencies":{"autoprefixer":"^10.4.19","postcss":"^8.4.39","tailwindcss":"^3.4.4"}}
