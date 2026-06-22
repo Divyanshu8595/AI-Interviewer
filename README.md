@@ -1,6 +1,6 @@
 # Local AI Voice Interviewer
 
-A lightweight, fully local AI interview platform for Windows 11 laptops with 8GB RAM and Intel integrated graphics. It uses only free and open-source components: Next.js, FastAPI, SQLite, ChromaDB, Ollama Gemma 3 1B, Faster Whisper Tiny, and Piper TTS.
+A lightweight, fully local AI interview platform for Windows 11 laptops with 8GB RAM and Intel integrated graphics. It uses only free and open-source components: Next.js, FastAPI, SQLite, ChromaDB, Ollama Gemma 2 2B, Faster Whisper Tiny, and Piper TTS.
 
 ## Architecture
 
@@ -30,7 +30,7 @@ flowchart LR
 
 ## 8GB RAM Optimization
 
-- Uses Gemma 3 1B through Ollama for CPU-only inference.
+- Uses Gemma 2 2B through Ollama for CPU-only inference.
 - Uses Faster Whisper Tiny rather than larger Whisper models.
 - Stores only high-signal resume sections in ChromaDB.
 - Avoids loading multiple heavyweight models at the same time.
@@ -43,7 +43,7 @@ flowchart LR
 Download Ollama from <https://ollama.com/download>, then run:
 
 ```bash
-ollama pull gemma3:1b
+ollama pull gemma2:2b
 ollama serve
 ```
 
