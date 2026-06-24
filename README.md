@@ -2,7 +2,7 @@
 
 A lightweight, fully local AI interview platform for Windows 11 laptops with 8GB RAM and Intel integrated graphics. It uses only free and open-source components: Next.js, FastAPI, SQLite, ChromaDB, Ollama Gemma 3 1B, Faster Whisper Tiny, and Piper TTS.
 
-## Architecture
+## Architecture.
 
 ```mermaid
 flowchart LR
